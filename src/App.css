@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+/* Importing the 'Inter' font from Google Fonts */
+
+* {
+  box-sizing: border-box;
+  /* Applying the border-box box-sizing to all elements */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Inter';
+  background-color: #F5F7Fb;
+  /* Setting the body styles, including the font, width, height, and background color */
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F5F7Fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Styles for the main container, which centers the content horizontally and vertically */
+}
+
+.content-container {
+  z-index: 10;
+  max-width: 950px;
+  /* Styles for the content container, including the maximum width */
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  /* Styles for the intro section, including flex layout and spacing */
+}
+
+.intro-header {
+  color: #293264;
+  font-size: 2.5rem;
+  /* Styles for the intro header, including the color and font size */
+}
+
+.intro-description {
+  color: #293264;
+  margin-bottom: 10px;
+  /* Styles for the intro description, including the color and margin */
+}
+
+.start-button {
+  padding: 16px 32px;
+  border-radius: .5rem;
+  background-color: #4d5b9e;
+  color: white;
+  border: none;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  /* Styles for the start button, including the padding, border-radius, background color, and font styles */
+}
+
+.start-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Styles for the start content container, including flex layout */
+}
+
+.end-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: .2rem;
+  /* Styles for the end div container, including flex layout and spacing */
+}
+
+.question-container {
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: left;
+  /* Styles for the question container, including margin, width, and text alignment */
+}
+
+.question-title {
+  font-size: .85rem;
+  color: #293264;
+  margin-bottom: 1rem;
+  /* Styles for the question title, including font size, color, and margin */
+}
+
+.answer {
+  background-color: transparent;
+  border: 1px solid #4D5B9E;
+  font-size: .6rem;
+  border-radius: .3rem;
+  margin-right: .6rem;
+  color: #293264;
+  padding: 2px 8px;
+  /* Styles for the answer options, including border, font size, color, and padding */
+}
+
+.line {
+  margin-top: .5rem;
+  width: 100%;
+  border-top: .8px solid #C4C8E0;
+  /* Styles for the horizontal line, including margin and border */
+}
+
+.answer-selected {
+  background-color: #D6DBF5;
+  border-color: #D6DBF5;
+  border-radius: .3rem;
+  /* Styles for the selected answer option, including background color and border */
+}
+
+.check {
+  color: white;
+  background-color: #4D5B9E;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  /* Styles for the check button, including colors, border, border-radius, and padding */
+}
+
+.score {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Inter';
+  /* Styles for the score, including font size, weight, and font family */
+}
+
+#correct {
+  background-color: #94D7A2;
+  border: 1px solid #94D7A2;
+  /* Styles for the correct answer, including background color and border */
+}
+
+#incorrect {
+  background-color: #F8BCBC;
+  border: 1px solid #F8BCBC;
+  /* Styles for the incorrect answer, including background color and border */
+}
+
+#not-selected- {
+  color: #29326466;
+  border: 1px solid #29326466;
+  /* Styles for the not selected answer, including color and border */
+}
+
+.blob1 {
+  top: 0;
+  right: 0;
+  /* Styles for the first blob element, positioning it at the top right */
+}
+
+.blob2 {
+  bottom: 0;
+  left: 0;
+  animation: vibration 0.5s infinite;
+  /* Styles for the second blob element, positioning it at the bottom left and applying the vibration animation */
+}
+
+.blob1,
+.blob2 {
+  position: fixed;
+  /* Styles for both blob elements, setting their position as fixed */
+}
+
+@keyframes vibration {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(5px, 5px); }
+  50% { transform: translate(0, 0); }
+  75% { transform: translate(-5px, -5px); }
+  100% { transform: translate(0, 0); }
+}
+/* Keyframe animation for the vibration effect */
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding: 0 20px;
+    /* Adjustments for screens up to 600px width, including padding for the content container */
+  }
+
+  .intro-header {
+    font-size: 2rem;
+    /* Adjustments for screens up to 600px width, including font size for the intro header */
+  }
+
+  .intro-description {
+    font-size: 0.9rem;
+    /* Adjustments for screens up to 600px width, including font size for the intro description */
+  }
+
+  .start-button {
+    padding: 12px 24px;
+    font-size: 14px;
+    /* Adjustments for screens up to 600px width, including padding and font size for the start button */
+  }
+
+  .question-title {
+    font-size: 0.8rem;
+    /* Adjustments for screens up to 600px width, including font size for the question title */
+  }
+
+  .answer {
+    font-size: 0.5rem;
+    margin-right: 0.4rem;
+    /* Adjustments for screens up to 600px width, including font size and margin for the answer options */
+  }
+
+  .check {
+    padding: 12px 20px;
+    font-size: 14px;
+    /* Adjustments for screens up to 600px width, including padding and font size for the check button */
+  }
+
+  .score {
+    font-size: 0.9rem;
+    /* Adjustments for screens up to 600px width, including font size for the score */
+  }
+
+  .question-container {
+    height: auto;
+    max-height: 250px;
+    overflow-y: scroll;
+    /* Adjustments for screens up to 600px width, including height and overflow for the question container */
+  }
+  
+  .content-container {
+    padding-top: 150px;
+    /* Adjustments for screens up to 600px width, including padding-top for the content container */
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .intro-header {
+    font-size: 1.8rem;
+    /* Adjustments for screens up to 400px width, including font size for the intro header */
+  }
+
+  .intro-description {
+    font-size: 0.8rem;
+    /* Adjustments for screens up to 400px width, including font size for the intro description */
+  }
+
+  .start-button {
+    padding: 10px 20px;
+    font-size: 13px;
+    /* Adjustments for screens up to 400px width, including padding and font size for the start button */
+  }
+
+  .question-title {
+    font-size: 0.7rem;
+    /* Adjustments for screens up to 400px width, including font size for the question title */
+  }
+
+  .answer {
+    font-size: 0.4rem;
+    margin-right: 0.3rem;
+    /* Adjustments for screens up to 400px width, including font size and margin for the answer options */
+  }
+
+  .check {
+    padding: 10px 18px;
+    font-size: 13px;
+    /* Adjustments for screens up to 400px width, including padding and font size for the check button */
+  }
+
+  .score {
+    font-size: 0.8rem;
+    /* Adjustments for screens up to 400px width, including font size for the score */
+  }
+
+  .question-container {
+    height: auto;
+    max-height: 200px;
+    overflow-y: scroll;
+    /* Adjustments for screens up to 400px width, including height and overflow for the question container */
+  }
+  
+  .content-container {
+    padding-top: 80px;
+    /* Adjustments for screens up to 400px width, including padding-top for the content container */
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  /* Adjustments for screens up to 300px width */
+  .question-container {
+    max-height: 150px;
+    overflow-y: scroll;
+    /* Adjustments for screens up to 300px width, including max-height and overflow for the question container */
+  }
+
+  .content-container {
+    padding-top: 200px;
+    /* Adjustments for screens up to 300px width, including padding-top for the content container */
+  }
+}
+
+@media only screen and (max-width: 480px), (max-height: 480px) {
+  /* Adjustments for small screens in both portrait and landscape orientations */
+  .question-container {
+    max-height: calc(100vh - 200px);
+    overflow-y: scroll;
+    /* Adjustments for small screens, including max-height and overflow for the question container */
+  }
+
+  .content-container {
+    padding-top: 300px;
+    /* Adjustments for small screens, including padding-top for the content container */
+  }
+}
